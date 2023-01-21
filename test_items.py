@@ -11,7 +11,7 @@ def test_find_cart_button(browser):
     browser.get(link)
    
     time.sleep(10) # можно увеличить время задержки для проверки
-    buttons_count = len(browser.find_elements(By.XPATH, "//*[@class='tn btn-lg btn-primary btn-add-to-basket']")) #  возвращает количество элементов
+    buttons_count = len(browser.find_elements(By.XPATH, "//*[@class='btn btn-lg btn-primary btn-add-to-basket']")) #  возвращает количество элементов
     assert buttons_count > 0, "The button not found!"
     if buttons_count > 0: # если кнопка есть, выводится название кнопки
         button_text = browser.find_element(By.XPATH, "//*[@class='btn btn-lg btn-primary btn-add-to-basket']").text
